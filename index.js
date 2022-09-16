@@ -39,10 +39,11 @@ export default async function readRoute(pathSource) {
 
 		const maps = (await import(pathToFileURL(pathMAP))).default;
 
-		maps.forEach(({ route, path }) =>
+		maps.forEach(({ route, path, option }) =>
 			folds.push({
 				route,
-				path: resolve(dirMAP, path)
+				path: resolve(dirMAP, path),
+				option
 			})
 		);
 	}

@@ -1,7 +1,7 @@
 {
 	"name": "@nuogz/desire-route",
-	"version": "2.0.0",
-	"description": "simple route loader for desire-harb-default",
+	"version": "2.1.0",
+	"description": "Route loader for the default harb of desire",
 	"author": "Nuogz",
 	"license": "LGPL-3.0-or-later",
 	"main": "index.js",
@@ -17,7 +17,7 @@
 		"node": ">=14.18.1"
 	},
 	"devDependencies": {
-		"eslint": "^8.21.0"
+		"eslint": "^8.23.1"
 	},
 	"dependencies": {
 		"fs-readdir-recursive": "^1.1.0"
