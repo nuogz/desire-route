@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v2.2.0 - 2023.03.03 10
+* add `d.ts`
+* bump up dependencies
+* new param `optionRouteDefault`
+
+
 ## v2.1.0 - 2022.09.16 10
 * support `koa-static` options as `option`
 

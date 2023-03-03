@@ -5,8 +5,32 @@ import ReaddirRecur from 'fs-readdir-recursive';
 
 
 
-export default async function readRoute(pathSource) {
+/**
+ * @typedef {Object} DesireRouteFace
+ * @property {string} route
+ * @property {string} [method='get']
+ * @property {Function} handle
+ * @property {boolean} [upload=false]
+ * @property {Object} [option]
+ */
+
+/**
+ * @typedef {Object} DesireRouteFold
+ * @property {string} route
+ * @property {string} path
+ * @property {Object} [option]
+ */
+
+
+
+/**
+ * @param {string} pathSource
+ * @param {Object} [optionRouteDefault]
+ */
+export default async function readRoute(pathSource, optionRouteDefault = {}) {
+	/** @type {DesireRouteFace[]} */
 	const faces = [];
+	/** @type {DesireRouteFold[]} */
 	const folds = [];
 
 	const filesSource = ReaddirRecur(pathSource);
@@ -27,7 +51,7 @@ export default async function readRoute(pathSource) {
 			method: api.method ?? 'get',
 			handle: api.handle,
 			upload: api.upload ?? false,
-			option: Object.assign({ parseResult: true }, JSON.parse(JSON.stringify(api))),
+			option: Object.assign(optionRouteDefault, JSON.parse(JSON.stringify(api))),
 		});
 	}
 
