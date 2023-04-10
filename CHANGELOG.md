@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v2.3.0 - 2023.04.10 20
+* tweak keys to align `@nuogz/desire-harbour`
+
+
 ## v2.2.0 - 2023.03.03 10
 * add `d.ts`
 * bump up dependencies

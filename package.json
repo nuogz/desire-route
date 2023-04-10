@@ -1,6 +1,6 @@
 {
 	"name": "@nuogz/desire-route",
-	"version": "2.2.0",
+	"version": "2.3.0",
 	"description": "Route loader for the default harb of desire",
 	"author": "Nuogz",
 	"license": "LGPL-3.0-or-later",
@@ -20,7 +20,7 @@
 		"**/*.d.ts"
 	],
 	"scripts": {
-		"emitDeclaration": "tsc ./index.js --declaration --emitDeclarationOnly --allowJs --preserveSymlinks"
+		"emitDeclaration": "tsc ./index.js --declaration --emitDeclarationOnly --allowJs --moduleResolution nodenext --module esnext --target esnext --experimentalDecorators"
 	},
 	"devDependencies": {
 		"eslint": "^8.35.0",

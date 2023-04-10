@@ -51,6 +51,7 @@ export default async function readRoute(pathSource, optionRouteDefault = {}) {
 			method: api.method ?? 'get',
 			handle: api.handle,
 			upload: api.upload ?? false,
+			destUpload: api.destUpload ?? false,
 			option: Object.assign(optionRouteDefault, JSON.parse(JSON.stringify(api))),
 		});
 	}
@@ -63,10 +64,10 @@ export default async function readRoute(pathSource, optionRouteDefault = {}) {
 
 		const maps = (await import(pathToFileURL(pathMAP))).default;
 
-		maps.forEach(({ route, path, option }) =>
+		maps.forEach(({ prefix, location, option }) =>
 			folds.push({
-				route,
-				path: resolve(dirMAP, path),
+				prefix,
+				location: resolve(dirMAP, location),
 				option
 			})
 		);
