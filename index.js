@@ -52,7 +52,7 @@ export default async function readRoute(pathSource, optionRouteDefault = {}) {
 			handle: api.handle,
 			upload: api.upload ?? false,
 			destUpload: api.destUpload ?? false,
-			option: Object.assign(optionRouteDefault, JSON.parse(JSON.stringify(api))),
+			option: Object.assign({}, optionRouteDefault, JSON.parse(JSON.stringify(api))),
 		});
 	}
 

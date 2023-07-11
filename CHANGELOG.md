@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v2.3.1 - 2023.07.11 15
+* fix face option assign bug
+* bump up dependencies
+* update environments
+
+
 ## v2.3.0 - 2023.04.10 20
 * tweak keys to align `@nuogz/desire-harbour`
 
