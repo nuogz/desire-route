@@ -1,32 +1,36 @@
 {
 	"name": "@nuogz/desire-route",
-	"version": "2.3.1",
+	"version": "2.4.0",
 	"description": "Route loader for the default harb of desire",
-	"author": "Nuogz",
+	"author": "DanoR",
 	"license": "LGPL-3.0-or-later",
 	"repository": {
 		"type": "git",
 		"url": "github:nuogz/desire-route"
 	},
+	"private": false,
 	"type": "module",
-	"typesSource": [],
+	"typesSource": [
+		"node"
+	],
+	"sideEffects": false,
 	"engines": {
 		"node": ">=14.18.1"
 	},
-	"sideEffects": false,
 	"main": "index.js",
 	"files": [
 		"index.js",
 		"**/*.d.ts"
 	],
+	"typings": "./index.d.ts",
 	"scripts": {
-		"emitDeclaration": "tsc ./index.js --declaration --emitDeclarationOnly --allowJs --moduleResolution nodenext --module esnext --target esnext --experimentalDecorators"
-	},
-	"devDependencies": {
-		"eslint": "^8.44.0",
-		"typescript": "^5.1.6"
+		"emitDeclaration": "tsc ./index.js --declaration --emitDeclarationOnly --moduleResolution nodenext --module nodenext --target esnext --experimentalDecorators --strict --allowJs --jsx preserve"
 	},
 	"dependencies": {
 		"fs-readdir-recursive": "^1.1.0"
+	},
+	"devDependencies": {
+		"eslint": "^8.55.0",
+		"typescript": "^5.3.3"
 	}
 }

@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## v2.4.0 - 2023.12.07 11
+* tweak enviroment
+* bump up dependencies
+
+
 ## v2.3.1 - 2023.07.11 15
 * fix face option assign bug
 * bump up dependencies
