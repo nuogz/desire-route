@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## v2.5.1 - 2024.08.27 13
+* docs: renew types
+* deps: bump up dependencies
+* chore: align package version with latest `@nuogz/desire`
+* chore: improve develop environments
+
+
 ## v2.4.0 - 2023.12.07 11
 * tweak enviroment
 * bump up dependencies

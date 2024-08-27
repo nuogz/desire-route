@@ -5,21 +5,8 @@ import ReaddirRecur from 'fs-readdir-recursive';
 
 
 
-/**
- * @typedef {Object} DesireRouteFace
- * @property {string} route
- * @property {string} [method='get']
- * @property {Function} handle
- * @property {boolean} [upload=false]
- * @property {Object} [option]
- */
-
-/**
- * @typedef {Object} DesireRouteFold
- * @property {string} route
- * @property {string} path
- * @property {Object} [option]
- */
+/** @typedef {import('./bases.d.ts').DesireRouteFace} DesireRouteFace */
+/** @typedef {import('./bases.d.ts').DesireRouteFold} DesireRouteFold */
 
 
 
@@ -44,11 +31,11 @@ export default async function readRoute(pathSource, optionRouteDefault = {}) {
 		const api = await import(pathToFileURL(pathAPI));
 
 		faces.push({
+			method: api.method ?? 'get',
 			route: posix.join(
 				...infoAPI.dir.split(sep),
 				basename(infoAPI.base, '.api.js')
 			),
-			method: api.method ?? 'get',
 			handle: api.handle,
 			upload: api.upload ?? false,
 			destUpload: api.destUpload ?? false,
